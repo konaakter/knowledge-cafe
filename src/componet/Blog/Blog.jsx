@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Knowlageblog from '../Knowlageblog/Knowlageblog';
+import './Blog.css'
 
 const Blog = () => {
     const [products, setproructs] = useState([]);
@@ -10,7 +11,7 @@ const Blog = () => {
     }, [])
 
     return (
-        <div className='blog-container'>
+        <div className='blog-container '>
             <div className='blog-body'>
                 <h1>blog</h1>
                 {
