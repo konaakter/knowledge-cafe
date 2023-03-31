@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import logo from '../../image/profile.png';
+import './Header.css'
+/*import logo from '../../images/prof';*/
 
 const Header = () => {
     return (
-        <div>
-            <h1>headrrS</h1>
-        </div>
+        <nav className='header-container border-bottom'>
+            <div >
+                <h2>Knowledge Cafe</h2> 
+            </div>
+            
+            <div>
+
+                <img src={logo} alt="" />
+
+            </div>
+
+        </nav>
     );
 };
 
