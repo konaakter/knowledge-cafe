@@ -21,7 +21,9 @@ const Quiz = () => {
             </div>
             <div className='border-bottom'>
                 <h3 className='text-primary'>How Does React work?</h3>
-               <p>React divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props. It's possible to have as many components as necessary without cluttering your code.</p> 
+               <p>DOM update: React updates the real DOM to reflect the changes in the virtual DOM. The updated elements are then visible to the user. <br/>
+
+                Event handling: When the user interacts with the UI, React handles the events and updates the state of the components. This triggers a re-rendering of the affected components, which in turn updates the virtual DOM and the real DOM.</p> 
                 
             </div>
             
