@@ -26,10 +26,6 @@ const Blog = () => {
         const newblog = [...blog, product];
         setblog(newblog);
     }
-
-
-    
-
     return (
         <div className='blog-container row'>
             <div className='blog-body col-md-8'>
@@ -56,5 +52,4 @@ const Blog = () => {
         </div>
     );
 };
-
 export default Blog;

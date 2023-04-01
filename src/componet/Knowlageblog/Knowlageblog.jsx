@@ -17,11 +17,11 @@ const Knowlageblog = (props) => {
             <div className='d-flex justify-content-between pt-4'>
                 <div className='d-flex'>
                     <div>
-                       <img className='imges '  src={Authorimage} alt="" />
+                       <img className='imges mt-1 '  src={Authorimage} alt="" />
 
                     </div>
                     <div className='ps-4'>
-                       <h4 className=' fs-2 fw-blod'>{Authorname}</h4>
+                       <h4 className=' fs-2 fw-bold'>{Authorname}</h4>
                        <p>{PublishDate}</p>
                     </div>
                 </div>
@@ -36,12 +36,11 @@ const Knowlageblog = (props) => {
                     
                 </div>
             </div>
-            <h3 className='pt-4 fs-2 fw-blod'>{Blogtitle}</h3>
+            <h3 className='pt-2 fs-2 fw-bolder'>{Blogtitle}</h3>
             <p>{Hastag}</p>
             <div>
                 <button className='text-primary  border border-0 bg-white mark-button' onClick={() => wtachTime(props.product)}> Mark as read</button>
             </div>
-            
             
         </div>
     );

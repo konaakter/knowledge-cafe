@@ -9,8 +9,8 @@ const Spantime = (props) => {
     }
     return (
         <div className='mt-4'>
-            <div className='card text-center mt-5 bg-light'>
-                <h3>Spent time on read: {total} min</h3>
+            <div className='card text-center mt-5 bg-light border border-primary-subtle'>
+                <h3 className='text-primary  f-3'>Spent time on read: {total} min</h3>
             </div>
             
         </div>

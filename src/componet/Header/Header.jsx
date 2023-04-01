@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <nav className='header-container border-bottom'>
             <div >
-                <h2>Knowledge Cafe</h2> 
+                <h2 className='f-2 fw-bold'>Knowledge Cafe</h2> 
             </div>
             
             <div>
