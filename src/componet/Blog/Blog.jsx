@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Knowlageblog from '../Knowlageblog/Knowlageblog';
-import Cart from '../Cart/Cart';
 import Blogstore from '../Blogstore/Blogstore';
+import Cart from '../Cart/Cart';
 
 
 const Blog = () => {

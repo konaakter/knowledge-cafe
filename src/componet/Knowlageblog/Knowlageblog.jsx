@@ -24,7 +24,7 @@ const Knowlageblog = (props) => {
                     </h4></div>
                     <div className='ps-2'>
 
-                        <button onClick={() => blogset(props.product)}><FontAwesomeIcon icon={faBookmark} /></button>
+                        <button className='border border-0 bg-white' onClick={() => blogset(props.product)}><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
                     
                     

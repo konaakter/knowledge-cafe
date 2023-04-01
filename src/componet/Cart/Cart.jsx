@@ -9,7 +9,7 @@ const cart = (props) => {
     }
     return (
         <div className='mt-4'>
-            <div className='card text-center mt-5'>
+            <div className='card text-center mt-5 bg-light'>
                 <h3>Spent time on read: {total} min</h3>
             </div>
             

@@ -1,20 +1,16 @@
 import React from 'react';
 
 const Blogstore = (props) => {
-    const blog = props.blog;
-    let bog;
-    for (const product of blog){
-
-        bog = product.Blogtitle;    
-        
-    }
+        const blog = props.blog;        
     return (
-        <div className='card mt-5 text-center bg-secondary-subtle'>
+        <div className='card mt-5 text-center bg-light'>
             <div>
                <h5>Bookmarked Blogs :{blog.length}</h5>
             </div>
-            <div className='card'>
-               <h3>{bog}</h3>
+            <div>
+            {
+                blog?.map(product => <h3 className='card shadow-lg'>{product.Blogtitle}</h3>)
+            }
             </div>
             
         </div>
