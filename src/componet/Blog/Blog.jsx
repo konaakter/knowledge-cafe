@@ -5,7 +5,7 @@ import './Blog.css';
 
 const Blog = () => {
     const [products, setproructs] = useState([]);
-    const [cart, setcart] = useState([])
+    const [cart, setcart] = useState([]);
     useEffect( () =>{
         fetch('products.json')
         .then(res => res.json())
