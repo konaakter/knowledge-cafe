@@ -1,6 +1,6 @@
 import React from 'react';
 
-const cart = (props) => {
+const Spantime = (props) => {
     const cart = props.cart;
     let total = 0;
     for (const product of cart){
@@ -15,6 +15,7 @@ const cart = (props) => {
             
         </div>
     );
+        
 };
 
-export default cart;
+export default Spantime;

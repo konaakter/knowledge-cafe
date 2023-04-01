@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Knowlageblog from '../Knowlageblog/Knowlageblog';
 import Blogstore from '../Blogstore/Blogstore';
-import Cart from '../Cart/Cart';
+import Spantime from '../Spantime/Spantime';
+
 
 
 const Blog = () => {
@@ -46,7 +47,7 @@ const Blog = () => {
 
             </div>
             <div className=' col-md-4'>
-                <Cart cart={cart}></Cart>
+                <Spantime cart={cart}></Spantime>
                 <Blogstore blog={blog}></Blogstore>
 
 

@@ -6,7 +6,7 @@ import { faBookmark} from '@fortawesome/free-solid-svg-icons'
 
 const Knowlageblog = (props) => {
     console.log(props)
-    const {Authorname, Blogtitle, Blogcoverimage, Authorimage, Readtime} = props.product
+    const {Authorname, Blogtitle, Blogcoverimage, Authorimage, Readtime, PublishDate, Hastag} = props.product
     const wtachTime = props.wtachTime;
     //blog---------------------------------------------------------------
     const blogset = props.blogset;
@@ -16,22 +16,28 @@ const Knowlageblog = (props) => {
             <img className='w-100' src={Blogcoverimage} alt="" srcset="" />
             <div className='d-flex justify-content-between pt-4'>
                 <div className='d-flex'>
-                   <img className='imges '  src={Authorimage} alt="" />
-                   <h4 className='blog pt-2 ps-4 fs-2 fw-blod'>{Authorname}</h4>
+                    <div>
+                       <img className='imges '  src={Authorimage} alt="" />
+
+                    </div>
+                    <div>
+                       <h4 className='blog pt-2 ps-4 fs-2 fw-blod'>{Authorname}</h4>
+                       <p>{PublishDate}</p>
+                    </div>
                 </div>
                 <div className='d-flex'>
-                    <div><h4>{Readtime} min read
+                    <div><h4 className='pt-2'>{Readtime} min read
                     </h4></div>
-                    <div className='ps-2'>
+                    <div>
 
-                        <button className='border border-0 bg-white' onClick={() => blogset(props.product)}><FontAwesomeIcon icon={faBookmark} /></button>
+                        <button className='border border-0 bg-white ps-2' onClick={() => blogset(props.product)}><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
                     
                     
                 </div>
             </div>
             <h3 className='pt-4 fs-2 fw-blod'>{Blogtitle}</h3>
-            <p>#programin #communicatoin</p>
+            <p>{Hastag}</p>
             <div>
                 <button className='text-primary  border border-0 bg-white mark-button' onClick={() => wtachTime(props.product)}> Mark as read</button>
             </div>
