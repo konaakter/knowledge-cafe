@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Knowlageblog from '../Knowlageblog/Knowlageblog';
 import Cart from '../Cart/Cart';
-import './Blog.css';
+import Blogstore from '../Blogstore/Blogstore';
+
 
 const Blog = () => {
     const [products, setproructs] = useState([]);
     const [cart, setcart] = useState([]);
+    //blog///////////////////////////////////////////////////
+    const [blog, setblog] = useState([]);
+
     useEffect( () =>{
         fetch('products.json')
         .then(res => res.json())
@@ -15,6 +19,14 @@ const Blog = () => {
         const newcart = [...cart, product];
         setcart(newcart);
     }
+    //blog---------------------------------------
+    
+    const blogset = (product) =>{
+        const newblog = [...blog, product];
+        setblog(newblog);
+    }
+
+
     
 
     return (
@@ -25,6 +37,8 @@ const Blog = () => {
                         key={product.id}
                         product={product}
                         wtachTime = {wtachTime}
+                        //blog---------------------------------------------------------------
+                        blogset = {blogset}
 
                     ></Knowlageblog>)
 
@@ -33,6 +47,7 @@ const Blog = () => {
             </div>
             <div className=' col-md-4'>
                 <Cart cart={cart}></Cart>
+                <Blogstore blog={blog}></Blogstore>
 
 
             </div>

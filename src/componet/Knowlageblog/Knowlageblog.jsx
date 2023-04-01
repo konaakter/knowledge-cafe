@@ -8,28 +8,33 @@ const Knowlageblog = (props) => {
     console.log(props)
     const {Authorname, Blogtitle, Blogcoverimage, Authorimage, Readtime} = props.product
     const wtachTime = props.wtachTime;
+    //blog---------------------------------------------------------------
+    const blogset = props.blogset;
     
     return (
-        <div className='Knowlageblog mb-5 card mt-5'>
+        <div className='Knowlageblog mb-5 border-bottom mt-5 '>
             <img className='w-100' src={Blogcoverimage} alt="" srcset="" />
             <div className='d-flex justify-content-between pt-4'>
                 <div className='d-flex'>
-                   <img className='imges'  src={Authorimage} alt="" />
-                   <h4 className='blog pt-2 ps-4'>{Authorname}</h4>
+                   <img className='imges '  src={Authorimage} alt="" />
+                   <h4 className='blog pt-2 ps-4 fs-2 fw-blod'>{Authorname}</h4>
                 </div>
                 <div className='d-flex'>
                     <div><h4>{Readtime} min read
                     </h4></div>
                     <div className='ps-2'>
-                        <FontAwesomeIcon icon={faBookmark} />
+
+                        <button onClick={() => blogset(props.product)}><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
                     
                     
                 </div>
             </div>
-            <h3 className='pt-3 '>{Blogtitle}</h3>
+            <h3 className='pt-4 fs-2 fw-blod'>{Blogtitle}</h3>
             <p>#programin #communicatoin</p>
-            <div><button className='text-primary  border border-0 bg-white mark-button' onClick={() => wtachTime(props.product)}> Mark as read</button></div>
+            <div>
+                <button className='text-primary  border border-0 bg-white mark-button' onClick={() => wtachTime(props.product)}> Mark as read</button>
+            </div>
             
             
         </div>

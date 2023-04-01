@@ -5,6 +5,7 @@ const cart = (props) => {
     let total = 0;
     for (const product of cart){
         total = total + product.Readtime
+
     }
     return (
         <div className='mt-4'>
