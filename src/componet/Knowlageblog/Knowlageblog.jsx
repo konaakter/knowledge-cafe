@@ -20,8 +20,8 @@ const Knowlageblog = (props) => {
                        <img className='imges '  src={Authorimage} alt="" />
 
                     </div>
-                    <div>
-                       <h4 className='blog pt-2 ps-4 fs-2 fw-blod'>{Authorname}</h4>
+                    <div className='ps-4'>
+                       <h4 className=' fs-2 fw-blod'>{Authorname}</h4>
                        <p>{PublishDate}</p>
                     </div>
                 </div>
