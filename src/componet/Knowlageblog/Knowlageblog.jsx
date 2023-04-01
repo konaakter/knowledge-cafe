@@ -21,8 +21,8 @@ const Knowlageblog = (props) => {
 
                     </div>
                     <div className='ps-4'>
-                       <h4 className=' fs-2 fw-bold'>{Authorname}</h4>
-                       <p>{PublishDate}</p>
+                       <h4 className=' fs-4 fw-bolder'>{Authorname}</h4>
+                       <p className='text-secondary'>{PublishDate}</p>
                     </div>
                 </div>
                 <div className='d-flex'>
@@ -37,7 +37,7 @@ const Knowlageblog = (props) => {
                 </div>
             </div>
             <h3 className='pt-2 fs-2 fw-bolder'>{Blogtitle}</h3>
-            <p>{Hastag}</p>
+            <p className='text-secondary'>{Hastag}</p>
             <div>
                 <button className='text-primary  border border-0 bg-white mark-button' onClick={() => wtachTime(props.product)}> Mark as read</button>
             </div>
