@@ -3,5 +3,8 @@
     border-radius: 100%;
 }
 .blog{
-    margin-right: 50%;
+    margin-right: 45%;
+}
+.mark-button{
+    text-decoration: underline;
 }

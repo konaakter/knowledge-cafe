@@ -5,11 +5,14 @@ import { faBookmark} from '@fortawesome/free-solid-svg-icons'
 
 
 const Knowlageblog = (props) => {
-    const {Authorname, Blogtitle, Blogcoverimage, Authorimage, Readtime, PublishDate} = props.product
+    console.log(props)
+    const {Authorname, Blogtitle, Blogcoverimage, Authorimage, Readtime} = props.product
+    const wtachTime = props.wtachTime;
+    
     return (
-        <div className='Knowlageblog mb-5'>
+        <div className='Knowlageblog mb-5 card mt-5'>
             <img className='w-75' src={Blogcoverimage} alt="" srcset="" />
-            <div className='d-flex me-5 pt-4'>
+            <div className='d-flex pt-4'>
                 <img className='imges'  src={Authorimage} alt="" />
                 <h4 className='blog pt-2 ps-2'>{Authorname}</h4>
                 <div className='d-flex'>
@@ -17,13 +20,13 @@ const Knowlageblog = (props) => {
                     </p></div>
                     <div>
                         <FontAwesomeIcon icon={faBookmark} />
-                        </div>
+                    </div>
                     
                     
                 </div>
             </div>
             <h3 className='pt-3 '>{Blogtitle}</h3>
-            <div><a href="#">Mark as read</a></div>
+            <div><button className='text-primary  border border-0 bg-white mark-button' onClick={() => wtachTime(props.product)}> Mark as read</button></div>
             
             
         </div>

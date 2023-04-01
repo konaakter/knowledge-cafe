@@ -1,30 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import Knowlageblog from '../Knowlageblog/Knowlageblog';
-import './Blog.css'
+import Cart from '../Cart/Cart';
+import './Blog.css';
 
 const Blog = () => {
     const [products, setproructs] = useState([]);
+    const [cart, setcart] = useState([])
     useEffect( () =>{
         fetch('products.json')
         .then(res => res.json())
         .then(data => setproructs(data))
     }, [])
+    const wtachTime = (product) =>{
+        const newcart = [...cart, product];
+        setcart(newcart);
+    }
+    
 
     return (
-        <div className='blog-container '>
-            <div className='blog-body'>
-                <h1>blog</h1>
+        <div className='blog-container row'>
+            <div className='blog-body col-md-8'>
                 {
                     products.map( product => <Knowlageblog
                         key={product.id}
-                        product={product} 
+                        product={product}
+                        wtachTime = {wtachTime}
+
                     ></Knowlageblog>)
 
                 }
 
             </div>
-            <div className='blog-store-body'>
-                <h1>blog clock</h1>
+            <div className=' col-md-4'>
+                <Cart cart={cart}></Cart>
+
 
             </div>
             
